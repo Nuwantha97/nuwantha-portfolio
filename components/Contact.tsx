@@ -40,7 +40,7 @@ const Contact: React.FC = () => {
           <div className="lg:col-span-2 space-y-8">
             <div className="p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-lg dark:shadow-none">
               <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-6">Contact Details</h3>
-              
+
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
                   <div className="p-3 bg-slate-100 dark:bg-slate-800 rounded-lg text-brand-primary">
@@ -76,14 +76,14 @@ const Contact: React.FC = () => {
                   </div>
                 </div>
               </div>
-              
+
               <div className="mt-8 pt-8 border-t border-slate-200 dark:border-slate-800">
                 <h4 className="text-slate-900 dark:text-white font-medium mb-4">Social Profiles</h4>
                 <div className="flex gap-4">
-                  <a href={PROFILE.github} className="p-3 bg-slate-100 dark:bg-slate-800 rounded-full text-slate-600 dark:text-slate-400 hover:bg-brand-primary hover:text-white transition-all">
+                  <a href={PROFILE.github} target="_blank" rel="noreferrer" className="p-3 bg-slate-100 dark:bg-slate-800 rounded-full text-slate-600 dark:text-slate-400 hover:bg-brand-primary hover:text-white transition-all">
                     <Github size={20} />
                   </a>
-                  <a href={PROFILE.linkedin} className="p-3 bg-slate-100 dark:bg-slate-800 rounded-full text-slate-600 dark:text-slate-400 hover:bg-brand-secondary hover:text-white transition-all">
+                  <a href={PROFILE.linkedin} target="_blank" rel="noreferrer" className="p-3 bg-slate-100 dark:bg-slate-800 rounded-full text-slate-600 dark:text-slate-400 hover:bg-brand-secondary hover:text-white transition-all">
                     <Linkedin size={20} />
                   </a>
                 </div>
@@ -95,14 +95,14 @@ const Contact: React.FC = () => {
           <div className="lg:col-span-3">
             <form onSubmit={handleSubmit(onSubmit)} className="p-8 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-xl">
               <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-6">Send a Message</h3>
-              
+
               <div className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-sm font-medium text-slate-600 dark:text-slate-400 mb-2">Name</label>
                     <input
                       {...register("name", { required: true })}
-                      type="text" 
+                      type="text"
                       className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-transparent text-slate-900 dark:text-white outline-none transition-all"
                       placeholder="Your name"
                     />
@@ -110,9 +110,9 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-slate-600 dark:text-slate-400 mb-2">Email</label>
-                    <input 
+                    <input
                       {...register("email", { required: true, pattern: /^\S+@\S+$/i })}
-                      type="email" 
+                      type="email"
                       className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-transparent text-slate-900 dark:text-white outline-none transition-all"
                       placeholder="john@example.com"
                     />
@@ -122,7 +122,7 @@ const Contact: React.FC = () => {
 
                 <div>
                   <label className="block text-sm font-medium text-slate-600 dark:text-slate-400 mb-2">Message</label>
-                  <textarea 
+                  <textarea
                     {...register("message", { required: true })}
                     rows={4}
                     className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-transparent text-slate-900 dark:text-white outline-none transition-all resize-none"
@@ -131,7 +131,7 @@ const Contact: React.FC = () => {
                   {errors.message && <span className="text-red-500 text-xs mt-1">Message is required</span>}
                 </div>
 
-                <button 
+                <button
                   type="submit"
                   disabled={isSubmitting}
                   className="w-full py-4 bg-gradient-to-r from-brand-primary to-brand-secondary text-white font-bold rounded-lg hover:shadow-lg hover:shadow-brand-primary/25 transition-all flex items-center justify-center gap-2 disabled:opacity-70"

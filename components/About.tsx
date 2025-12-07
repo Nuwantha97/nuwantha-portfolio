@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { PROFILE } from '../constants';
+import { PROFILE, PROJECTS } from '../constants';
 import { User, Cpu, Sparkles } from 'lucide-react';
 
 const About: React.FC = () => {
@@ -45,7 +45,7 @@ const About: React.FC = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-2">About Me</h2>
               <div className="w-20 h-1.5 bg-brand-primary rounded-full"></div>
             </div>
-            
+
             <div className="text-slate-700 dark:text-slate-300 space-y-6 text-lg leading-relaxed">
               {PROFILE.aboutLong.split('\n\n').map((paragraph, idx) => (
                 <p key={idx}>{paragraph}</p>
@@ -54,7 +54,7 @@ const About: React.FC = () => {
 
             <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4">
               <div className="p-4 bg-slate-50 dark:bg-slate-800/50 rounded-lg text-center border border-slate-200 dark:border-slate-700/50 shadow-sm dark:shadow-none">
-                <span className="block text-3xl font-bold text-brand-primary dark:text-brand-accent mb-1">6+</span>
+                <span className="block text-3xl font-bold text-brand-primary dark:text-brand-accent mb-1">{PROJECTS.length}+</span>
                 <span className="text-sm text-slate-600 dark:text-slate-400">Projects</span>
               </div>
               <div className="p-4 bg-slate-50 dark:bg-slate-800/50 rounded-lg text-center border border-slate-200 dark:border-slate-700/50 shadow-sm dark:shadow-none">

@@ -5,7 +5,7 @@ import { PROFILE } from '../constants';
 
 const Hero: React.FC = () => {
 
-  const CV_URL = "cv/CV4.pdf"
+  const CV_URL = "assets/CV4.pdf"
   const downloadCV = () => {
     const link = document.createElement('a');
     link.href = CV_URL;

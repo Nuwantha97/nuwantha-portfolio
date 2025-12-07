@@ -30,22 +30,22 @@ const Projects: React.FC = () => {
               {/* Image Area */}
               <div className="relative h-48 overflow-hidden">
                 <div className="absolute inset-0 bg-slate-900/10 dark:bg-slate-900/20 group-hover:bg-transparent transition-colors z-10" />
-                <img 
-                  src={project.image} 
+                <img
+                  src={project.image}
                   alt={project.title}
                   className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute top-4 right-4 z-20 flex gap-2">
-                   {project.github && (
-                     <a href={project.github} className="p-2 bg-white/80 dark:bg-slate-900/80 backdrop-blur text-slate-900 dark:text-white rounded-full hover:text-brand-primary dark:hover:text-brand-accent transition-colors shadow-sm">
-                       <Github size={16} />
-                     </a>
-                   )}
-                   {project.link && (
-                     <a href={project.link} className="p-2 bg-white/80 dark:bg-slate-900/80 backdrop-blur text-slate-900 dark:text-white rounded-full hover:text-brand-primary dark:hover:text-brand-accent transition-colors shadow-sm">
-                       <ExternalLink size={16} />
-                     </a>
-                   )}
+                  {project.github && (
+                    <a href={project.github} target="_blank" rel="noreferrer" className="p-2 bg-white/80 dark:bg-slate-900/80 backdrop-blur text-slate-900 dark:text-white rounded-full hover:text-brand-primary dark:hover:text-brand-accent transition-colors shadow-sm">
+                      <Github size={16} />
+                    </a>
+                  )}
+                  {project.link && (
+                    <a href={project.link} target="_blank" rel="noreferrer" className="p-2 bg-white/80 dark:bg-slate-900/80 backdrop-blur text-slate-900 dark:text-white rounded-full hover:text-brand-primary dark:hover:text-brand-accent transition-colors shadow-sm">
+                      <ExternalLink size={16} />
+                    </a>
+                  )}
                 </div>
               </div>
 

@@ -19,12 +19,12 @@ export const NAV_ITEMS: NavItem[] = [
 export const PROFILE = {
   name: "Nuwantha Siriwardhana",
   title: "AI-driven Software Engineer | Full-Stack Developer | Machine Learning Researcher",
-  summary: "Software Engineer specializing in full-stack web development and AI/ML applications, with hands-on experience in React, Node.js, Python, and machine learning model development.",
+  summary: "Software Engineer specializing in full-stack web development and AI/ML applications, with hands-on experience in Angular, React, Node.js, Python, and machine learning model development.",
   aboutLong: `I am a Computer Engineering graduate from the University of Jaffna with a strong passion for building intelligent systems. 
 
 During my internship at the Sri Lanka Ports Authority (MPMA), I honed my full-stack development skills by building robust management systems. My academic journey sparked a deep interest in Artificial Intelligence, specifically Natural Language Processing (NLP) and medical ML applications like TB diagnosis.
 
-I thrive at the intersection of research and industry application—bridging the gap between complex ML models and user-friendly software solutions. I am a fast learner, an analytical problem solver, and eager to contribute to cutting-edge tech teams.`,
+I thrive at the intersection of research and industry application bridging the gap between complex ML models and user-friendly software solutions. I am a fast learner, an analytical problem solver, and eager to contribute to cutting-edge tech teams.`,
   email: "nuwanthasiriwardhana@gmail.com",
   phone: "+94 71 617 2257",
   github: "https://github.com/Nuwantha97",
