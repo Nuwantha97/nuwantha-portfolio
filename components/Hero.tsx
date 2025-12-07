@@ -80,7 +80,7 @@ const Hero: React.FC = () => {
             {/* Profile Image Container */}
             <div className="absolute inset-6 rounded-full overflow-hidden border-4 border-white dark:border-slate-800 shadow-2xl shadow-brand-primary/20 bg-white dark:bg-slate-900">
               <img
-                src="https://picsum.photos/seed/nuwantha/800/800"
+                src="assets/photo2.jpg"
                 alt="Nuwantha Siriwardhana"
                 className="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity duration-500"
               />
