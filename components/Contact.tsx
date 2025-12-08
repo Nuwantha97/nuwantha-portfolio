@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send, Github, Linkedin } from 'lucide-react';
 import { PROFILE } from '../constants';
-import { useForm, SubmitHandler } from "react-hook-form";
+import { useForm } from "react-hook-form";
+import emailjs from "@emailjs/browser";
 
 type Inputs = {
   name: string;
@@ -13,16 +14,32 @@ const Contact: React.FC = () => {
   const { register, handleSubmit, formState: { errors }, reset } = useForm<Inputs>();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
+  const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+  const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+  const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
-  const onSubmit: SubmitHandler<Inputs> = async (data) => {
+
+  const onSubmit = async (data: any) => {
     setIsSubmitting(true);
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    console.log(data);
-    setIsSubmitting(false);
-    setSubmitSuccess(true);
-    reset();
-    setTimeout(() => setSubmitSuccess(false), 5000);
+    try {
+      await emailjs.send(
+        serviceId,
+        templateId,
+        {
+          name: data.name,
+          email: data.email,
+          message: data.message,
+        },
+        publicKey
+      );
+
+      setSubmitSuccess(true);
+    } catch (err) {
+      console.error(err);
+      alert("Failed to send message.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (

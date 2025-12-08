@@ -1,7 +1,7 @@
 import { GoogleGenAI } from "@google/genai";
 import { PROFILE, PROJECTS, SKILL_CATEGORIES, EDUCATION, CERTIFICATIONS } from "../constants";
 
-const apiKey = process.env.API_KEY || '';
+const apiKey = import.meta.env.VITE_GEMINI_API_KEY || '';
 const ai = new GoogleGenAI({ apiKey });
 
 export const generateChatResponse = async (userMessage: string): Promise<string> => {
